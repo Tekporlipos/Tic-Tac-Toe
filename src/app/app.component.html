@@ -1,0 +1,29 @@
+<div>
+  <h1>Tic-Tac-Toe Game</h1>
+  <div *ngIf="!gameStarted">
+    <label>Player 1 name: </label>
+    <input [(ngModel)]="player1Name" /><br />
+    <label>Player 2 name: </label>
+    <input [(ngModel)]="player2Name" /><br />
+    <button (click)="startGame()">Start Game</button>
+  </div>
+  <div *ngIf="gameStarted">
+    <h2>Current player: {{ currentPlayerName }}</h2>
+    <table>
+      <tr *ngFor="let row of board; let i = index">
+        <td *ngFor="let cell of row; let j = index" (click)="cellClicked(i, j)">
+          {{ cell }}
+        </td>
+      </tr>
+    </table>
+    <h2 *ngIf="gameOver">Game over! {{ winnerName }} wins!</h2>
+    <h2 *ngIf="!gameOver && isBoardFull()">Game over! It's a tie!</h2>
+    <button *ngIf="gameOver" (click)="resetGame()">Play Again</button>
+  </div>
+  <div>
+    <h2>Leaderboard</h2>
+    <ul>
+      <li *ngFor="let player of players">{{ player.name }}: {{ player.wins }}</li>
+    </ul>
+  </div>
+</div>
