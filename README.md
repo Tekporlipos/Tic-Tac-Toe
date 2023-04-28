@@ -1,27 +1,39 @@
-# TicTacToe
+Tic Tac Toe Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+This is a simple Tic Tac Toe game built with Angular. The game allows two players to take turns clicking on cells in a 3x3 grid until one player gets three in a row (horizontally, vertically, or diagonally) or all cells are filled without any player getting three in a row.
+Installation
 
-## Development server
+To run the game, you will need to have Node.js and Angular CLI installed on your computer.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    Clone the repository to your local machine using the command git clone https://github.com/your-username/tic-tac-toe.git.
 
-## Code scaffolding
+    Navigate to the project directory using the command cd tic-tac-toe.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Install the required dependencies using the command npm install.
 
-## Build
+    Run the application using the command ng serve.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    Open a web browser and go to the URL http://localhost:4200 to play the game.
 
-## Running unit tests
+How to Play
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    When the game starts, each player will be asked to enter their name.
 
-## Running end-to-end tests
+    Player 1 will be assigned the symbol 'X', and Player 2 will be assigned the symbol 'O'.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    Players will take turns clicking on cells in the grid. To click on a cell, simply click on it with your mouse.
 
-## Further help
+    The first player to get three of their symbols in a row (horizontally, vertically, or diagonally) wins the game.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    If all cells are filled without any player getting three in a row, the game ends in a tie.
+
+    After the game ends, a message will be displayed to indicate whether the game was won by a player or ended in a tie.
+
+    Click the "Play Again" button to start a new game.
+
+Leaderboard
+
+The game keeps track of the number of wins for each player and displays a simple leaderboard at the bottom of the screen. The leaderboard shows each player's name and the number of games they have won.
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
